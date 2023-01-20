@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\pesanan;
+use App\Models\order;
 
 class PesananController extends Controller
 {
@@ -14,10 +14,10 @@ class PesananController extends Controller
      */
     public function index()
     {
-        $mobil = pesanan::all();
+        $mobil = order::all();
         return view('mobil.pesanan.index', compact('mobil'),[
-            'title' => 'pesanan',
-            'active' => 'pesanan'
+            'title' => 'order',
+            'active' => 'order'
         ]);
     }
 
@@ -28,10 +28,10 @@ class PesananController extends Controller
      */
     public function create()
     {
-        $mobil = new pesanan;
+        $mobil = new order;
         return view('mobil.pesanan.create', compact('mobil'),[
-            'title' => 'pesanan',
-            'active' => 'pesanan'
+            'title' => 'order',
+            'active' => 'order'
         ]);
     }
 
@@ -43,12 +43,12 @@ class PesananController extends Controller
      */
     public function store(Request $request)
     {
-        $mobil = new pesanan;
+        $mobil = new order;
         $mobil->name = $request->name;
         $mobil->email = $request->email;
-        $mobil->Nomor = $request->Nomor;
-        $mobil->haris_id = $request->haris_id;
-        $mobil->mobils_id = $request->mobils_id;
+        $mobil->number = $request->number;
+        $mobil->days_id = $request->days_id;
+        $mobil->cars_id = $request->cars_id;
         $mobil->save();
 
         return redirect('pesanan');
@@ -73,10 +73,10 @@ class PesananController extends Controller
      */
     public function edit($id)
     {
-        $mobil = pesanan::find($id);
+        $mobil = order::find($id);
         return view('mobil.pesanan.edit', compact('mobil'), [
-            'title' => 'pesanan',
-            'active' => 'pesanan'
+            'title' => 'order',
+            'active' => 'order'
         ]);
     }
 
@@ -89,12 +89,12 @@ class PesananController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $mobil = pesanan::find($id);
+        $mobil = order::find($id);
         $mobil->name = $request->name;
         $mobil->email = $request->email;
-        $mobil->Nomor = $request->Nomor;
-        $mobil->haris_id = $request->haris_id;
-        $mobil->mobils_id = $request->mobils_id;
+        $mobil->number = $request->number;
+        $mobil->days_id = $request->days_id;
+        $mobil->cars_id = $request->cars_id;
         $mobil->save();
 
         return redirect('pesanan');
@@ -108,7 +108,7 @@ class PesananController extends Controller
      */
     public function destroy($id)
     {
-        $mobil = pesanan::find($id);
+        $mobil = order::find($id);
         $mobil->delete();
         return redirect('pesanan');
     }

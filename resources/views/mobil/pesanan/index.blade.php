@@ -4,7 +4,7 @@
 
 <table align="center" class="table mt-5">
 <tr align="center">
-    <th>Name</th>
+    <th>Nama</th>
     <th>Email</th>
     <th>No Hp/Wa</th>
     <th>Mobil</th>
@@ -16,9 +16,9 @@
 <tr align="center">
 <td>{{ $value->name }}</td>
 <td>{{ $value->email }}</td>
-<td>{{ $value->Nomor }}</td>
-<td>{{ $value->mobils->name }}</td>
-<td>{{ $value->haris->name }}</td>
+<td>{{ $value->number }}</td>
+<td>{{ $value->cars->name }}</td>
+<td>{{ $value->days->name }}</td>
 <td><a href="{{ url('pesanan/'.$value->id.'/edit') }}" class="text-dark btn btn-outline-info btn-success">Upgrade</a></td>
 <td>
     <form action="{{ url('pesanan/'.$value->id) }}" method="POST">

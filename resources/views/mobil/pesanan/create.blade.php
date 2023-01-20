@@ -16,11 +16,11 @@
                 </div>
                 <div class="form-floating">
                     <label for="nomor">No Hp/Wa</label>
-                    <input type="text" class="form-control" name="Nomor" placeholder="No Hp/Wa" autocomplete="off">
+                    <input type="text" class="form-control" name="number" placeholder="No Hp/Wa" autocomplete="off">
                 </div>
                 <div class="form-floating">
                     <label for="fakultas">/ hari</label>
-                     <select id="fakultas" name="haris_id" class="form-control">
+                     <select id="fakultas" name="days_id" class="form-control">
                         <option value="1">1 hari mobil jazz/avanza</option> 
                         <option value="2">2 hari mobil jazz/avanza</option>
                         <option value="3">3 hari mobil jazz/avanza</option> 
@@ -31,7 +31,7 @@
                 </div>
                 <div class="form-floating">
                     <label for="fakultas">Nama Mobil</label>
-                     <select id="fakultas" name="mobils_id" class="form-control">
+                     <select id="fakultas" name="cars_id" class="form-control">
                         <option value="1">Avanza</option> 
                         <option value="2">Jazz</option>
                         <option value="3">hilux</option> 
